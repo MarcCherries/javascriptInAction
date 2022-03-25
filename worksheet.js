@@ -1,6 +1,6 @@
 "use strict"
 
-
+/*
 let dayOfWeek = 'Friday';
 console.log(dayOfWeek);
 
@@ -31,3 +31,18 @@ else if (timeOfDay > 1700){
     favoriteMeal = ('Phad See Eiw');
 }
 console.log(favoriteMeal);
+*/
+let randomNumber = Math.floor(Math.random()*10);
+if (randomNumber < 3 && randomNumber >= 0 ){
+    console.log("Beatles");
+}
+else if (randomNumber < 6 && randomNumber > 2 ){
+    console.log("Stones");
+}
+if (randomNumber < 9 && randomNumber > 5 ){
+    console.log("Floyd");
+}
+if (randomNumber === 9 || randomNumber === 10 ){
+    console.log("Hendrix");
+}
+console.log(randomNumber)
