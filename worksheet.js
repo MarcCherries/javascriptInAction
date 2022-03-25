@@ -105,21 +105,22 @@ for (let i = 0; i < desktopItems.length; i++){;
 
 
 let guess = 0;
-let magicNumber = 50;
+let magicNumber = Math.floor(Math.random()*100)
 while (guess != magicNumber){
     let guess = prompt('Please guess a number. ');
     if (guess == magicNumber){
         alert(`Congratulations! ${guess} is the correct number! `);
         break;
     }
-    else if (guess < 41){
-        alert('Too low!');
-    }
-    else if (guess > 60){
-        alert('Too high!');
-    }
-    else if (guess < 61 || guess > 40){
+    else if ((magicNumber - guess) < 11 && (magicNumber - guess) > -11){
         alert('Getting warmer!');
     }
+    else if (guess < magicNumber){
+        alert('Too low!');
+    }
+    else if (guess > magicNumber){
+        alert('Too high!');
+    }
+  
    
 }
