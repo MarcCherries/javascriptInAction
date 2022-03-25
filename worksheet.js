@@ -31,7 +31,7 @@ else if (timeOfDay > 1700){
     favoriteMeal = ('Phad See Eiw');
 }
 console.log(favoriteMeal);
-*/
+
 let randomNumber = Math.floor(Math.random()*10);
 if (randomNumber < 3 && randomNumber >= 0 ){
     console.log("Beatles");
@@ -46,3 +46,18 @@ if (randomNumber === 9 || randomNumber === 10 ){
     console.log("Hendrix");
 }
 console.log(randomNumber)
+
+
+for (let i = 0; i < 7; i++){
+    alert('Javascript is cool!');
+}
+
+
+for (let i=0; i < 11; i++){
+    alert(i);
+}
+*/
+for (let i = 0; i < 5; i++){
+    console.log('hello');
+    console.log('goodbye');
+}
