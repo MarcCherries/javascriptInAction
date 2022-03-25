@@ -68,7 +68,7 @@ movieToPrint = console.log(favoriteMovie);
 }
 let myMovie = printMovieName("Goodfellas");
 
-*/
+
 function favoriteBand (UserInput){
     let bandInput;
     bandInput = prompt ("What is your favorite band? ");
@@ -87,3 +87,39 @@ function concertDisplay (musicalAct){
 }
 
 let concertOne = concertDisplay(first_band)
+
+let desktopItems = ['Phone', 'Laptop', 'Russian Blue Cat']
+console.log(desktopItems[1])
+
+desktopItems.push('Infinity Gauntlet')
+console.log(desktopItems)
+
+for (let i = 0; i < desktopItems.length; i++){;
+    console.log(desktopItems[i])
+}
+*/
+
+
+
+
+
+
+let guess = 0;
+let magicNumber = 50;
+while (guess != magicNumber){
+    let guess = prompt('Please guess a number. ');
+    if (guess == magicNumber){
+        alert(`Congratulations! ${guess} is the correct number! `);
+        break;
+    }
+    else if (guess < 41){
+        alert('Too low!');
+    }
+    else if (guess > 60){
+        alert('Too high!');
+    }
+    else if (guess < 61 || guess > 40){
+        alert('Getting warmer!');
+    }
+   
+}
