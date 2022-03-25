@@ -1,6 +1,7 @@
 "use strict"
 
-/*
+function gettingToKnowYou(){
+
 let dayOfWeek = 'Friday';
 console.log(dayOfWeek);
 
@@ -15,10 +16,12 @@ console.log (colorInput);
 
 alert(`I've never seen a ${colorInput} ${animalInput}!`);
 
-//breakfast sunnyside up eggs and sausage
-//lunch tuna sandwich
-//dinner phad see eiw
+}
 
+let userOne = gettingToKnowYou();
+
+
+function whatToEat (){
 let timeOfDay = 2000
 let favoriteMeal = ''
 if (timeOfDay < 1200){
@@ -30,22 +33,30 @@ else if (timeOfDay > 1200 && timeOfDay < 1700){
 else if (timeOfDay > 1700){
     favoriteMeal = ('Phad See Eiw');
 }
-console.log(favoriteMeal);
+alert(favoriteMeal);
+}
 
-let randomNumber = Math.floor(Math.random()*10);
-if (randomNumber < 3 && randomNumber >= 0 ){
-    console.log("Beatles");
+let firstMeal = whatToEat()
+
+
+function bandPicker(){
+    let randomNumber = Math.floor(Math.random()*10);
+    if (randomNumber < 3 && randomNumber >= 0 ){
+        alert("Beatles");
+    }
+    else if (randomNumber < 6 && randomNumber > 2 ){
+        alert("Stones");
+    }
+    if (randomNumber < 9 && randomNumber > 5 ){
+        alert("Floyd");
+    }
+    if (randomNumber === 9 || randomNumber === 10 ){
+        alert("Hendrix");
+    }
+
+    alert(randomNumber)
 }
-else if (randomNumber < 6 && randomNumber > 2 ){
-    console.log("Stones");
-}
-if (randomNumber < 9 && randomNumber > 5 ){
-    console.log("Floyd");
-}
-if (randomNumber === 9 || randomNumber === 10 ){
-    console.log("Hendrix");
-}
-console.log(randomNumber)
+    let tryOne = bandPicker() 
 
 
 for (let i = 0; i < 7; i++){
@@ -64,12 +75,12 @@ for (let i = 0; i < 5; i++){
 
 function printMovieName (favoriteMovie){
 let movieToPrint;
-movieToPrint = console.log(favoriteMovie);
+movieToPrint = alert(favoriteMovie);
 }
 let myMovie = printMovieName("Goodfellas");
 
 
-function favoriteBand (UserInput){
+function favoriteBand (){
     let bandInput;
     bandInput = prompt ("What is your favorite band? ");
     return bandInput;
@@ -77,16 +88,17 @@ function favoriteBand (UserInput){
 }
 
 let first_band = favoriteBand();
-console.log(first_band);
+alert(first_band);
 
 
 function concertDisplay (musicalAct){
    let myStreet;
    myStreet = prompt('Please enter the street you live on. ')
-   console.log(`It would be great if ${musicalAct} played a show on ${myStreet}!`)
+   alert(`It would be great if ${musicalAct} played a show on ${myStreet}!`)
 }
 
 let concertOne = concertDisplay(first_band)
+
 
 let desktopItems = ['Phone', 'Laptop', 'Russian Blue Cat']
 console.log(desktopItems[1])
@@ -97,30 +109,33 @@ console.log(desktopItems)
 for (let i = 0; i < desktopItems.length; i++){;
     console.log(desktopItems[i])
 }
-*/
 
 
 
 
 
 
-let guess = 0;
-let magicNumber = Math.floor(Math.random()*100)
-while (guess != magicNumber){
-    let guess = prompt('Please guess a number. ');
-    if (guess == magicNumber){
-        alert(`Congratulations! ${guess} is the correct number! `);
-        break;
+function guessingGame (){
+    let guess = 0;
+    let magicNumber = Math.floor(Math.random()*100)
+    while (guess != magicNumber){
+        let guess = prompt('Please guess a number. ');
+        if (guess == magicNumber){
+            alert(`Congratulations! ${guess} is the correct number! `);
+            break;
+        }
+        else if ((magicNumber - guess) < 11 && (magicNumber - guess) > -11){
+            alert('Getting warmer!');
+        }
+        else if (guess < magicNumber){
+            alert('Too low!');
+        }
+        else if (guess > magicNumber){
+            alert('Too high!');
+        }
+    
+    
     }
-    else if ((magicNumber - guess) < 11 && (magicNumber - guess) > -11){
-        alert('Getting warmer!');
-    }
-    else if (guess < magicNumber){
-        alert('Too low!');
-    }
-    else if (guess > magicNumber){
-        alert('Too high!');
-    }
-  
-   
 }
+
+let gameOne = guessingGame();
