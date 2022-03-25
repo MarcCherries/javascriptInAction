@@ -56,8 +56,34 @@ for (let i = 0; i < 7; i++){
 for (let i=0; i < 11; i++){
     alert(i);
 }
-*/
+
 for (let i = 0; i < 5; i++){
     console.log('hello');
     console.log('goodbye');
 }
+
+function printMovieName (favoriteMovie){
+let movieToPrint;
+movieToPrint = console.log(favoriteMovie);
+}
+let myMovie = printMovieName("Goodfellas");
+
+*/
+function favoriteBand (UserInput){
+    let bandInput;
+    bandInput = prompt ("What is your favorite band? ");
+    return bandInput;
+
+}
+
+let first_band = favoriteBand();
+console.log(first_band);
+
+
+function concertDisplay (musicalAct){
+   let myStreet;
+   myStreet = prompt('Please enter the street you live on. ')
+   console.log(`It would be great if ${musicalAct} played a show on ${myStreet}!`)
+}
+
+let concertOne = concertDisplay(first_band)
